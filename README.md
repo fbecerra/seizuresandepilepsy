@@ -1,2 +1,3 @@
-# cs109a_project
-CS109a Data Science Final Project
+# CS109a Data Science Final Project
+
+Preciting seizures and epilepsy
