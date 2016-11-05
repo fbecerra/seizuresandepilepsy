@@ -1,5 +1,6 @@
 # Only use datasets locally!
 datasets/
+Data/
 
 # Ignore checkpoitns
 .ipynb_checkpoints/
