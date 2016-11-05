@@ -1,5 +1,8 @@
 # Only use datasets locally!
 datasets/
 
+# Ignore checkpoitns
+.ipynb_checkpoints/
+
 .DS_Store
 **/.DS_Store
