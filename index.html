@@ -1,0 +1,625 @@
+ <!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="CS109a Final Project: Predicting Seizures and Epilepsy">
+    <meta name="author" content="">
+
+    <title>Predicting Seizures</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	
+    <!-- Custom CSS-->
+    <link href="css/general.css" rel="stylesheet">
+	
+	 <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+	<link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="css/magnific-popup.css"> 
+	
+	<script src="js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
+	<!--[if IE 9]>
+		<script src="js/PIE_IE9.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="js/PIE_IE678.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body id="home">
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+	
+	<!-- FullScreen -->
+    <div class="intro-header">
+		<div class="col-xs-12 text-center abcen1">
+			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Predicting seizures and epilespy</h1>
+			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Fernando Becerra, Xinrui Cao, Yi Ding, Andrew Mayo</h3>
+			<ul class="list-inline intro-social-buttons">
+				<li><a href="https://github.com/fbecerra/seizuresandepilepsy" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">GitHub repository</span></a>
+				</li>
+				<li id="download" ><a href="https://github.com/fbecerra/seizuresandepilepsy/archive/master.zip" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Download Source</span></a>
+				</li>
+			</ul>
+		</div>    
+        <!-- /.container -->
+		<div class="col-xs-12 text-center abcen wow fadeIn">
+			<div class="button_down "> 
+				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#intro"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+			</div>
+		</div>
+    </div>
+	
+	<!-- NavBar-->
+	<nav class="navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home">Predicting epilepsy</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					
+					<li class="menuItem"><a href="#intro">Intro</a></li>
+					<li class="menuItem"><a href="#thedata">The Data</a></li>
+					<li class="menuItem"><a href="#themodel">The Model</a></li>
+					<li class="menuItem"><a href="#results">Results</a></li>
+					<li class="menuItem"><a href="#conclusions">Conclusions</a></li>
+					<li class="menuItem"><a href="#theteam">The Team</a></li>
+				</ul>
+			</div>
+		   
+		</div>
+	</nav> 
+	
+	<!-- Intro -->
+
+	<div id="intro" class="content-section-a" style="border-top: 0">
+
+
+		<div class="container">
+
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2>Introduction</h2>
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+
+					<p class="lead">
+						As one of the most far-ranging and devastating neurologic diseases, epilepsy afflicts over 50
+						million individuals worldwide. The most diasabling aspects of seizures are its unpredictability,
+						potentially life-threatening impairment of consciousness, and the embarrassment of incidences,
+						which can lead to social isolation and even misbehavior.</p>
+
+					<p class="lead">
+						Therefore, for our CS109a project, we decided to study seizures and our ability to predict them.
+						Our goal has been to build a model that can determine the factors that affect epilepsy
+						recurrence and predict future seizure incidences given the individual's identity, medical
+						history, social behavior, etc. </p>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+	
+	<!-- The Data -->
+    <div id ="thedata" class="content-section-b">
+
+        <div class="container">
+
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2>The Data</h2>
+			</div>
+			
+            <div class="row">
+
+				<div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					<h3 class="section-heading">Getting the data</h3>
+					<p class="lead">
+						Sweep 0-3 (Age 0-16) of 1958 National Child Development Study, which tracks every child born in
+						the UK during a single week in 1958. 1026 out of 18558 children developed syndrome like epilepsy
+						and convulsion before age 11. 250 of them relapsed by age 16.
+					</p>
+
+				</div>
+
+
+            </div>
+
+			<div class="row">
+
+				<div class="col-sm-12 wow fadeInRightBig"  data-animation-delay="200">
+					<h3 class="section-heading">Cleaning the data</h3>
+					<p class="lead">
+						Analysis of NCDS data is challenging for three reasons: 1) The primary goal of the study is not
+						focused on seizure, so useful information of seizure prediction is scarce; 2) The study is a
+						longitudinal survey-based study, so large volume of missing data is expected; 3) The study
+						contains repeated questions collected for each sweep, so high collinearity between covariates
+						exists.
+
+					</p>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-12 wow fadeInRightBig"  data-animation-delay="200">
+					<h3 class="section-heading">Extracting seizure sample</h3>
+					<p class="lead">
+						We selected individuals who were hospitalized, handicapped or absent from school due to epilepsy
+						or convulsion, and got 1026 children with seizure before age 11, 250 of whom relapsed by age 25.
+
+					</p>
+
+				</div>
+
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/sweep0.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/sweep1.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/sweep2.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/sweep3.png" alt="">
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-12 wow fadeInRightBig"  data-animation-delay="200">
+					<h3 class="section-heading">Preliminary predictors selection</h3>
+
+					<p class="lead">
+						Based on subject matter knowledge, we extract 207 social economic status and medical related
+						variables. After dropping columns with a missing rate higher than 50%, 188 variables remain for
+						analysis.
+
+					</p>
+
+				</div>
+
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/predictors1.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/predictors2.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/predictors3.png" alt="">
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-12 wow fadeInRightBig"  data-animation-delay="200">
+					<h3 class="section-heading">Handling missing values</h3>
+					<p class="lead">
+						Variables with missing rate higher than 50% were deleted directly. For continuous data, we
+						fill in as column mean. For categorical data, we tried two different strategies: 1) fill in
+						the most frequent category, 2) fill in as ‘missing’ category. The second one turned out
+						better than the first in terms of prediction accuracy, so the ‘missing’ strategy was
+						adopted.
+
+					</p>
+
+				</div>
+
+
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/missing_values1.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/missing_values2.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/missing_values3.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/missing_values4.png" alt="">
+				</div>
+			</div>
+
+				<div class="row">
+
+					<div class="col-sm-12 wow fadeInRightBig"  data-animation-delay="200">
+						<h3 class="section-heading">Access collinearity</h3>
+						<p class="lead">
+							Multi-collinearity was checked by calculating variance inflation factor (VIF). We adopted
+							a backward elimination strategy to delete variables with high correlation with others
+							iteratively. VIF was calculated for each variable in the dataset and the variable with the
+							highest VIF were deleted in each step until no VIF is higher than 10 according to the rule
+							of thumb. 88 variables left after this process.
+
+						</p>
+
+					</div>
+					<div class="col-sm-12 wow fadeInRightBig">
+						<img class="img-responsive " src="img/collinearity1.png" alt="">
+					</div>
+					<div class="col-sm-12 wow fadeInRightBig">
+						<img class="img-responsive " src="img/collinearity2.png" alt="">
+					</div>
+					<div class="col-sm-12 wow fadeInRightBig">
+						<img class="img-responsive " src="img/heatmap.png" alt="">
+					</div>
+
+				</div>
+
+			</div>
+
+
+			</div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+
+	<!-- The Model -->
+
+	<div id="themodel" class="content-section-a">
+		
+		<div class="container">
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title ">
+				<h2>The Model</h2>
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					<h3 class="section-heading">Model selection</h3>
+					<p class="lead">
+						Due to the imbalance nature of the dataset (776 non-relapse subjects and 250 relapse subjects),
+						we adopted two strategies to combat this problem: 1) use weighted models 2) under-sample
+						non-relapse subjects and over-sample relapse subjects.
+					</p>
+					<p class="lead">
+						Decision Tree, Random Forest, Linear SVM, Logistic Regression, LDA and QDA were considered for
+						model building. L1 penalty were used for Logistic Regression and SVM to handle potential
+						collinearity. Quadratic effects of Logistic Regression and SVM were not considered given that 87
+						out of 88 variables are categorical. After tuning the regularize parameter (max_depth for
+						Decision Tree and Random Forest, C for Linear SVM and Logistic Regression) via cross validation
+						and select the parameter which maximize the overall accuracy of training set.
+					</p>
+				</div>
+				<div class="col-sm-6 wow fadeInRightBig">
+					<img class="img-responsive " src="img/cv_weighted.png" alt="">
+				</div>
+				<div class="col-sm-6 wow fadeInRightBig">
+					<img class="img-responsive " src="img/cv_balanced.png" alt="">
+				</div>
+
+				<div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					<p class="lead">
+						To compare performance of different methods, we randomly split training and testing set for 100
+						times, recorded accuracy on whole dataset, class 0 (non-relapse) and class 1 (relapse) for each
+						model, and finally plot their distribution as follows.
+					</p>
+				</div>
+
+
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/weighted_model_comparison.png" alt="">
+				</div>
+				<div class="col-sm-12 wow fadeInRightBig">
+					<img class="img-responsive " src="img/balanced_model_comparison.png" alt="">
+				</div>
+
+				<div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					<p class="lead">
+						We found that for both strategies, Linear SVM and Logistic Regression had the highest overall
+						accuracy around 0.7, but they classify all subjects as non-relapse. For each strategy, Decision
+						Tree, Random Forest and LDA were close in overall accuracy and accuracy for each class owing to the
+						fact that we delete variables with high multi-collinearity with other variables. It’s hard to
+						decide which model to choose. Given that Random Forest, which randomly select features for tree
+						building, is less susceptible to collinearity by nature, we decided to use Random Forest. Also we
+						found that although the overall performance for Random Forest were close in two strategies
+						(around 0.65), the accuracy of class 1 (relapse) are higher in resampling balanced sample strategy
+						and the weighted model strategy (around 0.4 for weighted strategy, around 0.5 for resampling
+						balanced sample strategy). Finally, we decided to adopt Random Forest based on resampling balanced
+						sample strategy.
+					</p>
+				</div>
+
+			</div>
+        </div>
+    </div>
+
+
+	<!-- Results -->
+	<div id="results" class="content-section-b">
+        <div class="container">
+          <div class="row" >
+			 <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
+				<h2>Results</h2>
+			 </div>
+
+			  <div class="row">
+
+				  <div class="col-sm-12 wow fadeInRightBig">
+					  <iframe width="1200" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~xinruicao/47.embed"></iframe>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					  <h5 class="section-heading">Feature importance</h5>
+					  <p class="lead">
+						  Based on our random forest model, the most important 20 features include personalities,
+						  medical-related factors (mostly associated with heart and blood), social economic status, etc.
+						  These findings make intuitive sense, and are adherent with our previous literature studies.
+						  The top three important features are "whether the child prefer doing things on him/her self,
+						  i.e. solitary personality"; "Whether the child has temper tantrums in past 12 month"; and
+						  "whether the child has any illness during the past 12 months". One interesting finding is the
+						  role of the region of birth and the region they live in at the year of 16, we'll take a closer
+						  look at this geographical variable later.
+					  </p>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInRightBig">
+					  <iframe width="1200" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~xinruicao/48.embed"></iframe>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					  <h5 class="section-heading">No.1 Feature Importance, variable 'n2523', “Does things on own, rather solitary” </h5>
+					  <p class="lead">
+						  From the above data visualization, we can tell that the relapse of epilepsies is associated
+						  with solitary personality.
+					  </p>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInRightBig">
+					  <iframe width="1200" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~xinruicao/56.embed"></iframe>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					  <h5 class="section-heading">No.2 Feature Importance, variable 'n2504', Temper tantrums in past 12 months</h5>
+					  <p class="lead">
+						  From the above data visualization, we can tell that the relapse of epilepsies is associated
+						  with frequent temper tantrums in the past year.
+					  </p>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInRightBig">
+					  <iframe width="1200" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~xinruicao/60.embed"></iframe>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					  <h5 class="section-heading">No.3 Feature Importance, variable 'n2560', Illnesses in past 12 month</h5>
+					  <p class="lead">
+						  It seems that the relapse group has more incidences of dysmenorrhea and high fever during the
+						  previous year.
+					  </p>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInRightBig">
+					  <iframe width="1200" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~xinruicao/62.embed"></iframe>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					  <h5 class="section-heading">Exploration: 'n3region', Region at NCDS3 (1974) - 16 years</h5>
+					  <p class="lead">
+						  It seems like more children with relapsed epilepsies in the NCDS dataset live on the southeast
+						  or east part of England when they were 16 years old. However, taking the relative large
+						  percentage of missing values presented for the non relapsed group into consideration, the
+						  differences on region is hard to tell between the two groups of interests.
+					  </p>
+				  </div>
+
+				  <div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					  <h3 class="section-heading">Discussion</h3>
+					  <p class="lead">
+						  The 1958 NCDS dataset is a social survey-based longitudinal dataset, which imposes two
+						  difficulties. First, a large amount of missing value existed in the dataset. We assign
+						  ‘missing’ to missing values in categorical data, and the mean value to missing values in
+						  continuous data. We may improve the data analysis by using more complicated methods such as
+						  multiple imputation. But if the data is not missing at random, our results will remain biased.
+						  The second problem is that although 18558 children were followed up in the longitudinal study
+						  for almost 20 years, there is a limited amount of useful information in terms of seizure
+						  prediction. This is the nature of longitudinal study, but the problem could be addressed by
+						  designing a study targeted specifically at epilepsy analysis.</p>
+
+				  </div>
+			  </div>
+		  </div>
+
+        </div>
+
+	</div>
+	
+	<!-- Conclusions -->
+	<div id="conclusions" class="content-section-a">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+					<h2>Conclusions</h2>
+				</div>
+
+				<div class="col-sm-12 wow fadeInLeftBig"  data-animation-delay="200">
+					<p class="lead">
+						We have presented a seizure prediction model for the 1958 National Child Development Study.
+						The model fit 100 decision trees in the training set to predict seizures in test set (taking
+						the majority as the result). This model yielded an overall accuracy of 0.615260 and a test
+						accuracy of 0.617647 for non-relapse group and a test accuracy of 0.607143 in relapse group.</p>
+
+				</div>
+
+				<div class="morph-button btn-block text-center">
+					<button type="button">
+						<a href="https://github.com/fbecerra/seizuresandepilepsy"><span style="color:#f9f6e5">Visit the GitHub repository</span></a>
+					</button>
+				</div>
+
+		  
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- The Team -->
+	<div id="theteam" class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2>The Team</h2>
+			 </div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Contact -->
+	<div class="content-section-a">
+
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-3 wow fadeInDown text-center">
+					<img class="rotate" src="img/team/yi.png" alt="Generic placeholder image">
+					<h3>Yi</h3>
+					<p class="lead">I am a first year master student at Harvard studying Biostatistics.  </p>
+
+					<p><a class="btn btn-embossed btn-primary view" href="#" role="button">Website</a>
+					<a class="btn btn-embossed btn-info" href="emailto:yid095@mail.harvard.edu" role="button">E-mail</a></p>
+				</div><!-- /.col-lg-4 -->
+
+				<div class="col-sm-3 wow fadeInDown text-center">
+					<img  class="rotate" src="img/team/xinrui.png" alt="Generic placeholder image">
+					<h3>Xinrui</h3>
+					<p class="lead">I am a first year master student at Harvard studying Biostatistics. </p>
+					<p><a class="btn btn-embossed btn-primary view" href="https://linkedin.com/in/xinrui-cao-94223b55" role="button">Website</a>
+						<a class="btn btn-embossed btn-info" href="emailto:xic188@mail.harvard.edu" role="button">E-mail</a></p>
+				</div><!-- /.col-lg-4 -->
+
+				<div class="col-sm-3 wow fadeInDown text-center">
+					<img  class="rotate" src="img/team/fernando.png" alt="Generic placeholder image">
+					<h3>Fernando</h3>
+					<p class="lead">I am an Astronomy grad student at Harvard studying the formation of black holes in the
+						Early Universe. </p>
+					<p><a class="btn btn-embossed btn-primary view" href="https://www.cfa.harvard.edu/~fbecerra" role="button">Website</a>
+						<a class="btn btn-embossed btn-info" href="mailto:fbecerra@cfa.harvard.edu" role="button">E-mail</a></p>
+				</div><!-- /.col-lg-4 -->
+
+				<div class="col-sm-3 wow fadeInDown text-center">
+					<img  class="rotate" src="img/team/andrew.png" alt="Generic placeholder image">
+					<h3>Andrew</h3>
+					<p class="lead">I am a senior undergrad at Harvard studying Physics and Astrophysics with a
+						secondary in CS.</p>
+					<p><a class="btn btn-embossed btn-primary view" href="#" role="button">Website</a>
+						<a class="btn btn-embossed btn-info" href="mailto:andrewmayo@college.harvard.edu" role="button">E-mail</a></p>
+				</div><!-- /.col-lg-4 -->
+
+			</div><!-- /.row -->
+		</div>
+	</div>
+	
+	
+	
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h3 class="footer-title">References</h3>
+		  	<ul>
+			  <li>&#8226 Kariuki, S., Newton, C., Prince, M. J., & Das-Munshi, J. (2016). The association between childhood
+				  seizures and later childhood emotional/ behavioral problems: findings from a nationally representative
+				  birth cohort. Psychosomatic Medicine. 10.1097/PSY.0000000000000305
+			  </li>
+			  <li>&#8226 Hauser, W.A. and Beghi, E. (2008) First seizure definitions and worldwide incidence and mortality.
+				  Epilepsia, 49, 8-12. doi:10,1111/j.1528-1167.2008.01443.x
+			  </li>
+			  <li>&#8226 Carney, Paul R., Stephen Myers, and James D.Geyer. “Seizure Prediction: Methods.” Epilepsy & behavior: E&B 22.Suppl I (2011): S94-S101. PMC. Web. 8 Dec.2016
+			  </li>
+		  	</ul>
+          </div> <!-- /col-xs-7 -->
+
+          <div class="col-md-5">
+            <div class="footer-banner">
+              <h3 class="footer-title">Acknowledgments</h3>
+              <p>Thank you to the CS109a staff for providing us with an excellent class, engaging material, and
+				  wonderful support. Thank you especially to Kela Roberts, our project TF who provided us with superb
+				  feedback throughout our project.</p>
+
+				<!-- LICENSE -->
+				<a rel="cc:attributionURL" href="http://www.andreagalanti.it/flatfy"
+				   property="dc:title">Flatfy Theme </a> by
+				<a rel="dc:creator" href="http://www.andreagalanti.it"
+				   property="cc:attributionName">Andrea Galanti</a>
+				is licensed to the public under the <a rel="license"
+						   href="http://creativecommons.org/licenses/by-nc/3.0/it/deed.it">Creative
+				Commons Attribution 3.0 License - NOT COMMERCIAL</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/script.js"></script>
+	<!-- StikyMenu -->
+	<script src="js/stickUp.min.js"></script>
+	<script type="text/javascript">
+	  jQuery(function($) {
+		$(document).ready( function() {
+		  $('.navbar-default').stickUp();
+		  
+		});
+	  });
+	
+	</script>
+	<!-- Smoothscroll -->
+	<script type="text/javascript" src="js/jquery.corner.js"></script> 
+	<script src="js/wow.min.js"></script>
+	<script>
+	 new WOW().init();
+	</script>
+	<script src="js/classie.js"></script>
+	<script src="js/uiMorphingButton_inflow.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script src="js/jquery.magnific-popup.js"></script> 
+</body>
+
+</html>
